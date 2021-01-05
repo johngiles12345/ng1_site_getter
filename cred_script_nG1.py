@@ -181,13 +181,13 @@ def main():
     if user_entry_menu(creds) == False: #The credentials params entry menu has failed:
         print('Main: The user_entry_menu has failed')
         print('\nExiting the script...')
-        exit()
+        sys.exit()
 
     # Create the credentials file.
     if create_cred(creds, cred_filename) == False: # The create credentials file function has failed.
         print('Main: create_cred has failed')
         print('\nExiting the script...')
-        exit()
+        sys.exit()
     else: # The credentials file was created successfully.
         print(f"\nThe credentials file {cred_filename} was created at {time.ctime()}")
         print('\nProgram execution has completed successfully')
